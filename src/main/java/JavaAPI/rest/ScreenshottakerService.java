@@ -13,7 +13,7 @@ import ru.yandex.qatools.ashot.AShot;
 
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class ScreenShotTaker {
+public class ScreenshottakerService {
 
 	static WebDriver driver;
 

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class screenshotapi extends HttpServlet{
+public class Screenshot extends HttpServlet{
 
 	
 	private static final long serialVersionUID = 1L;
@@ -23,7 +23,7 @@ public class screenshotapi extends HttpServlet{
 		resp.addHeader("Access-Control-Allow-Origin", "*");
 		String url=req.getParameter("url");
 		
-		ScreenShotTaker.takeScreenshot(url);
+		ScreenshottakerService.takeScreenshot(url);
 		
 		out.print("<h3>Your Screenshot has been Saved !!! Please check your folder</h3>");
 		
