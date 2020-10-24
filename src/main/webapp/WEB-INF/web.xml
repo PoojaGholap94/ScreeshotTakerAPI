@@ -7,16 +7,16 @@
   
  
   <servlet>
-  	<servlet-name>screenshotapi</servlet-name>
-  	<display-name>screenshotapi</display-name>
+  	<servlet-name>Screenshot</servlet-name>
+  	<display-name>Screenshot</display-name>
   	<description>api</description>
-  	<servlet-class>JavaAPI.rest.screenshotapi</servlet-class>
+  	<servlet-class>JavaAPI.rest.Screenshot</servlet-class>
   </servlet>  
   
 
 <servlet-mapping>
-	<servlet-name>screenshotapi</servlet-name>
-	<url-pattern>/screenshotapi</url-pattern>
+	<servlet-name>Screenshot</servlet-name>
+	<url-pattern>/Screenshot</url-pattern>
 </servlet-mapping>  
   
 <welcome-file-list>  

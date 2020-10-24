@@ -20,7 +20,6 @@ public class Screenshot extends HttpServlet{
         PrintWriter out = resp.getWriter();  
 
 		resp.setContentType("text/html");
-		resp.addHeader("Access-Control-Allow-Origin", "*");
 		String url=req.getParameter("url");
 		
 		ScreenshottakerService.takeScreenshot(url);
