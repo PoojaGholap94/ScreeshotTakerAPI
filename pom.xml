@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>JavaAPI</groupId>
-	<artifactId>ScreeshotAPI</artifactId>
+	<artifactId>API</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ScreeshotAPI Maven Webapp</name>
+	<name>API Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -15,6 +15,8 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.atlassian.applinks/applinks-cors-plugin -->
+
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -22,7 +24,7 @@
 			<version>4.0.0-b05</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-remote-driver</artifactId>
@@ -53,6 +55,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>ScreeshotAPI</finalName>
+		<finalName>API</finalName>
 	</build>
 </project>

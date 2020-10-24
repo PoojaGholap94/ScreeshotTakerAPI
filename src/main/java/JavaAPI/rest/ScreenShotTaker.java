@@ -17,35 +17,36 @@ public class ScreenShotTaker {
 
 	static WebDriver driver;
 
-	public static void main(String[] args) throws IOException {
-
+	public static void takeScreenshot(String Url) {
 		WebDriverManager.chromedriver().setup();
 
 		driver = new ChromeDriver();
 
-		// Specify the targetted URL
-		String testURL = "https://clang.llvm.org/docs/LibASTMatchersTutorial.html";
-
 		// Access the targetted URL
-		driver.get(testURL);
+		driver.get(Url);
 		BufferedImage scr = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(3000))
 				.takeScreenshot(driver).getImage();
-		
+
 		// Capture screenshot of the web page using TakesScreenshot method
-		final File screenShotOutputFile = new File("screenshot_" + generatetimeStampBasedRandomNumber() + ".png");
+		final File screenShotOutputFile = new File("C:\\Users\\Shailesh\\eclipse-workspace\\ScreeshotAPI\screenshot_"
+				+ generatetimeStampBasedRandomNumber() + ".png");
 		try {
-			ImageIO.write(scr, "jpg", screenShotOutputFile);
+			ImageIO.write(scr, "png", screenShotOutputFile);
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		System.out.println("Took Screenshot for " + testURL + " saved at " + screenShotOutputFile);
+		System.out.println("Took Screenshot for " + Url + " saved at " + screenShotOutputFile + " path is : "
+				+ screenShotOutputFile.getPath());
 
 		// Quit the driver
 		driver.quit();
 	}
 
-	// Method to generate Random number based on DateTimeStamp i am using this so that we can change the name of images and every image has unique name
+	// Method to generate Random number based on DateTimeStamp i am using this so
+	// that we can change the name of images and every image has unique name & can
+	// be recognized easily
 	private static String generatetimeStampBasedRandomNumber() {
 
 		Date date = new Date();
